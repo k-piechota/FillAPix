@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fill-a-pix</title>
+
+<style>
+body {
+  background-color: white;
+  text-align: center;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+
+<ul>
+  <h2>Fill-a-pix Online &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Konrad Piechota</h2>
+</ul>
+
+<br><br><br><br>
+
+<form>
+  <label for="name">Imie:</label><br>
+  <input type="name" id="name" name="name"><br><br><br><br>
+  <label for="rows">Kolumny:</label><br>
+  <input type="text" id="rows" name="rows"><br><br>
+  <label for="columns">Wiersze:</label><br>
+  <input type="text" id="columns" name="columns"><br><br>
+
+
+  <select id="graphics">
+  {% for image in images %}
+    <option value="{{ image }}">{{ image }}</option>
+  {% endfor %}
+</select> <br> <br>
+
+  <button type="button" onClick="startGame();">Start</button>
+
+</form>
+
+</body>
+</html>

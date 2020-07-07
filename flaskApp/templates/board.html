@@ -1,0 +1,20 @@
+<html>
+<head>
+<style>
+    body {
+  background-color: white;
+  text-align: center;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</head>
+<body onload="init({{ board|safe }}, {{game_id}}, {{ filled|safe }});">
+
+  <h2>Fill-a-pix Online &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Konrad Piechota</h2>
+  <canvas id="canvas" width="800px" height="800px" style="background: #fff;     margin:20px;"></canvas>
+</body>
+</html>
